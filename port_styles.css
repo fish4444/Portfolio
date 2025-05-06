@@ -46,6 +46,17 @@ a:hover {
   font-weight: bold;   /* bold nav links */
 }
 
+.home-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
+
+
+
 /* ===== HOME SECTION ===== */
 .content-wrapper {
   display: flex;
@@ -218,6 +229,66 @@ a:hover {
   max-width: 90%;
 }
 
+/* ===== ABOUT SECTION ===== */
+/* ===== ABOUT SECTION ===== */
+.about-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 250px;
+  max-width: 600px;
+}
+
+.about-photo-wrapper {
+  flex-shrink: 0;
+}
+
+.about-icon {
+  width: 50px;
+  margin-bottom: 1rem;
+}
+
+.about-photo {
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-text h4 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.about-text p {
+  font-size: 1.3rem;
+  
+}
+
+.about-text a {
+  color: blue;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .about-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-photo {
+    width: 80%;
+  }
+}
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -241,6 +312,70 @@ a:hover {
   }
 
   .card {
+    max-width: 90%;
+  }
+}
+/* ===== REDESIGN PAGE SPECIFIC ===== */
+
+/* Case Study Page Layout */
+.case-row {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.case-row p {
+  flex: 1;
+  min-width: 250px;
+}
+
+.case-row img {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* Keep two images the same size in Sketches */
+.sketch-imgs {
+  display: flex;
+  gap: 1rem;
+}
+
+.sketch-imgs img {
+  flex: 1;
+  max-width: 400px;
+}
+
+/* Make sure both are identical in height */
+.same-size {
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
+  margin-left: 250px;
+}
+
+/* GitHub link spacing */
+.github-link {
+  margin-top: -1rem;
+  font-size: 1rem;
+}
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+  .case-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sketch-imgs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sketch-imgs img {
     max-width: 90%;
   }
 }
